@@ -1,0 +1,1 @@
+﻿ IsEnabled="{Binding ElementName=GategoryItemText, Path=Text, Converter={StaticResource YesNoToBooleanConverter}}">
