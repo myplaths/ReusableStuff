@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace
+namespace WPF_TESTING.Random.Composition
 {
     class Composition
     {

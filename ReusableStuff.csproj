@@ -5,14 +5,34 @@
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <ItemGroup>
-    <Compile Include="Composition.cs" />
+    <Compile Include="Composition\Composition.cs" />
+    <Compile Include="Composition\Compositiontwo.cs" />
+    <Compile Include="Converters\MultiBoolVisibilityConverter.cs" />
     <Compile Include="DatabaseSavedStuff.cs" />
+    <Compile Include="Databases\DatabaseStuff.cs" />
+    <Compile Include="DataTriggers\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DependencyProperty\DependencyTest.xaml.cs">
+      <DependentUpon>DependencyTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Generics\Generics.cs" />
+    <Compile Include="How to Pass Interfaces through parameters\PassInterfacesThroughParameters.cs" />
     <Compile Include="SavedClasses.cs" />
     <Compile Include="SavedXAML.xaml.cs">
       <DependentUpon>SavedXAML.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SQL\InitializingLists.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="DataTriggers\UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DependencyProperty\DependencyTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="SavedXAML.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -22,11 +42,16 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ShortCopy.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
